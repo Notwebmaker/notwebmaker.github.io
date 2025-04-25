@@ -1,4 +1,4 @@
-/* ok, you know how to use inpect tool (better than me!) you deserve the code for the secret code*/
+/* ok, you know how to use inpect tool (better than me!) (or are you useing github commits?) you deserve the code for the secret code*/
 /*shh tell nobody, here is a secret link! https://github.com/DogeNetwork/v4*/
 /*ok its actually the link to the source code but you get the idea, now you can find links to it easier*/
 function secret() {
@@ -19,6 +19,10 @@ function secret() {
         text = "the crappiest tetris game ever (that works)"
         extra = "https://js-tetris-game.glitch.me/"
     } 
+    else if (code == 'digmeup'){
+        text = "very sophisticated"
+        extra = "https://joemama34568.github.io/"
+    }
     else {
         alert('Invalid code');
     }
