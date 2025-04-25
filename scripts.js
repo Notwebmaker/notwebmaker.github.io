@@ -1,4 +1,6 @@
 /* ok, you know how to use inpect tool (better than me!) you deserve the code for the secret code*/
+/*shh tell nobody, here is a secret link! https://github.com/DogeNetwork/v4*/
+/*ok its actually the link to the source code but you get the idea, now you can find links to it easier*/
 function secret() {
     let code = prompt("Enter code:");
     
@@ -14,8 +16,8 @@ function secret() {
         extra ='it may be blocked but idk';
     }
     else if (code == 'totallysecure'){
-        text = "this is placeholder secret message"
-        extra = "you may find a proper link here"
+        text = "the crappiest tetris game ever (that works)"
+        extra = "https://js-tetris-game.glitch.me/"
     } 
     else {
         alert('Invalid code');
