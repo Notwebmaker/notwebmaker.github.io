@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<span><button onclick = "window.location.href='https://notwebmaker.github.io/'">Back to Homepage</button></span>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click the Button Game-by Chatgpt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            padding: 20px;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            position: absolute;
+        }
+        #message {
+            font-size: 18px;
+            color: green;
+        }
+        #timer {
+            font-size: 20px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Click the Button Game</h1>
+<p>Click the button as fast as you can before time runs out!</p>
+
+<button id="targetButton" onclick="clickButton()">Click Me!</button>
+
+<p id="timer">Time Left: 10s</p>
+<p id="message"></p>
+
+<script>
+    let timeLeft = 10;
+    let score = 0;
+
+    function startTimer() {
+        let interval = setInterval(() => {
+            timeLeft--;
+            document.getElementById("timer").textContent = `Time Left: ${timeLeft}s`;
+
+            if (timeLeft === 0) {
+                clearInterval(interval);
+                document.getElementById("message").textContent = `Game Over! You clicked ${score} times.`;
+                document.getElementById("targetButton").disabled = true;
+            }
+        }, 1000);
+    }
+
+    function moveButton() {
+        const button = document.getElementById("targetButton");
+        const x = Math.floor(Math.random() * (window.innerWidth - button.offsetWidth));
+        const y = Math.floor(Math.random() * (window.innerHeight - button.offsetHeight));
+
+        button.style.left = `${x}px`;
+        button.style.top = `${y}px`;
+    }
+
+    function clickButton() {
+        score++;
+        moveButton();
+    }
+
+    function resetGame() {
+        score = 0;
+        timeLeft = 10;
+        document.getElementById("message").textContent = "";
+        document.getElementById("timer").textContent = `Time Left: 10s`;
+        document.getElementById("targetButton").disabled = false;
+        startTimer();
+        moveButton();
+    }
+
+    window.onload = resetGame;
+</script>
+
+</body>
+</html>
