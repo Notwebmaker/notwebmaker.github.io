@@ -18,14 +18,20 @@ function secret() {
     else if (code == 'totallysecure'){
         text = "the crappiest tetris game ever (that works)"
         extra = "https://js-tetris-game.glitch.me/"
-    } 
-    else if (code == 'digmeup'){
+    } else if (code == 'digmeup'){
         text = "very sophisticated"
         extra = "https://joemama34568.github.io/"
+    }else if (code == 'Hidden'){
+        text = atob('aHR0cHM6Ly9kYWRkeS1sb25nLWxlZy1pLWxvdmUtdGhlbS52ZXJjZWwuYXBwLw');
+        extra = "another sophisticated site"
+    }else if (code == 'analanspecial'||code == 'an alan special'){
+        text= atob ('c3BhY2UgZm9yIGJvYiBhbGFuJ3Mgc2VjcmV0IGxpbmsgdGhhdCBoZSByZWFsbHkgd2FudHMgdG8gYmUgYSBzZWNyZXQ=');
+        extra = "btw, coding this website was fun"
     }
     else {
         alert('Invalid code');
     }
   document.getElementById("code_result").innerHTML = text;
   document.getElementById("additional_infobox").innerHTML = extra;
+  console.log (atob('SGlkZGVuCg=='))
 }
