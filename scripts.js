@@ -28,6 +28,15 @@ function secret() {
         text= atob ('c3BhY2UgZm9yIGJvYiBhbGFuJ3Mgc2VjcmV0IGxpbmsgdGhhdCBoZSByZWFsbHkgd2FudHMgdG8gYmUgYSBzZWNyZXQ=');
         extra = "btw, coding this website was fun"
     }
+    else if (code == "4.712"||code == "4.71"){
+        text = ('ding ding ding ding! ')
+        extra = ('we have a winner!   no prize for you though ')
+    }
+     else if (code == "কলা"){
+        text = ("we have a winner! no prize for you though ")
+        extra = ('jk, here is a link https://unblocked-2025.github.io/')
+    }
+    
     else {
         alert('Invalid code');
     }
